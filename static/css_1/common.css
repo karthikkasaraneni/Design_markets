@@ -1,0 +1,40 @@
+.headerContainer {
+    padding-bottom: 15px;
+    height: 8%;
+}
+body {
+    font-family: Oswald;
+    overflow-x: hidden;
+}
+header {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+}
+.main {
+    margin-top: 5rem;
+}
+.rntLogo {
+    width: 100%;
+    margin-top: 3%;
+}
+.pageTitleHeader {
+    position: relative;
+    font-family: Oswald;
+    font-size: 25px;
+    /* margin-left: 10rem; */
+    top: 10px;
+    left: 2rem;
+}
+.pageSubTitle {
+    font-weight: 300;
+    font-size: 13px;
+    position: relative;
+    bottom: -1rem;
+    left: -9rem;
+    top: 2rem;
+}

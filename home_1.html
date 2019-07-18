@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MARKET INCIDENT EXPLORATION</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="static/css/jquery-ui.css">
+    <link rel="stylesheet" href="static/css/jquery-ui.structure.css">
+    <link rel="stylesheet" href="static/css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="static/css/financeProject.css">
+	
+	<style>
+.rntlable {
+color:#555; 
+  font-weight:normal;
+  font-size: 14px;
+  position:absolute;
+    left:17px;
+   top:7px;
+   z-index:-1;
+   transform-origin: 36.5px
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+.select-1
+{
+display: block;
+    width: 100%;
+    height: 34px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+	padding-left:8px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+
+.select-1:focus { outline:none;border-color:#00a0e3;
+ }
+
+.select-1:focus ~ .rntlable,.select-1:valid ~ .rntlable 
+{
+ top:-8px;
+  font-size:12px;
+  color:#00a0e3;
+  z-index:0;
+    left:17px;
+	font-family: 'Open Sans', sans-serif;
+  background-color:white;
+
+}
+.select-1:focus ~ .rntlable,.select-1:valid ~ .rntlable ::before
+{
+ top:-8px;
+   z-index:0;
+  font-size:12px;
+  color:#00a0e3;
+    left:17px;
+	font-family: 'Open Sans', sans-serif;
+  background-color:white;
+
+}
+
+	</style>
+	
+	
+	
+	
+	
+</head>
+<body>
+    <header>
+        <div class="container headerContainer">
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <a href="#">
+                        <img src="static/images/RNT_Vector_Logo.svg" class="rntLogo" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 text-center titleDivHeader">
+                    <span class="pageTitleHeader">MARKET INCIDENT EXPLORATION</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid contentContainer">
+        <div class="row">
+            <div class="col-sm-5 col-md-5 col-lg-5">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="panel">
+                        <div class="panel-heading">Event Identifiers</div>
+                        <div class="titleBottom" style="margin-left:15px;"></div>
+                        <div class="panel-body">
+                            <form class="financeForm">
+							<div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <select name="" id="" class="select-1" required>
+                                        <option value="">Business Line</option>
+                                        <option value="Banking">Banking</option>
+                                        <option value="Capital Markets">Capital Markets</option>
+                                        <option value="Investment Banking">Investment Banking</option>
+										<option value="Wealth Management">Wealth Management</option>
+										<option value="Venture Capital & Private Equity">Venture Capital & Private Equity</option>
+										<option value="Fund Management">Fund Management</option>
+										<option value="Finance (other)">Finance (other)</option>
+                                    </select>
+									<label class="rntlable">business Line</label>
+									</div>
+									</div>
+									<div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <select name="" id="" class="select-1" required>
+                                        <option value="">Event Type</option>
+                                        <option value="Internal Fraud">Internal Fraud</option>
+                                        <option value="External Fraud">External Fraud</option>
+                                        <option value="Technology">Technology</option>
+										<option value="Infrastructure Failure">Infrastructure Failure</option>
+										<option value="Workplace Safety and Environment">Workplace Safety and Environment</option>
+										<option value="Natural Disasters">Natural Disasters</option>
+										<option value="Others">Others</option>
+                                    </select>
+										<label class="rntlable">Event Type</label>
+                                </div>
+								</div>
+								<div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <select name="" id="" class="select-1" required>
+                                        <option value="">Geographic Region</option>
+                                        <option value="APAC">APAC</option>
+                                        <option value="EMEA">EMEA</option>
+                                        <option value="North America">North America</option>
+										<option value="Afghanistan">Afghanistan
+										<option value="Albania">Albania
+										<option value="Algeria">Algeria
+										<option value="American Samoa">American Samoa
+										<option value="Angola">Angola
+										<option value="Anguilla">Anguilla
+										<option value="Antartica">Antartica
+										<option value="Antigua and Barbuda">Antigua and Barbuda
+										<option value="Argentina">Argentina
+										<option value="Armenia">Armenia
+										<option value="Aruba">Aruba
+										<option value="Ashmore and Cartier Island">Ashmore and Cartier Island
+										<option value="Australia">Australia
+										<option value="Austria">Austria
+										<option value="Azerbaijan">Azerbaijan
+										<option value="Bahamas">Bahamas
+										<option value="Bahrain">Bahrain
+										<option value="Bangladesh">Bangladesh
+										<option value="Barbados">Barbados
+										<option value="Belarus">Belarus
+										<option value="Belgium">Belgium
+										<option value="Belize">Belize
+										<option value="Benin">Benin
+										<option value="Bermuda">Bermuda
+										<option value="Bhutan">Bhutan
+										<option value="Bolivia">Bolivia
+										<option value="Bosnia and Herzegovina">Bosnia and Herzegovina
+										<option value="Botswana">Botswana
+										<option value="Brazil">Brazil
+										<option value="British Virgin Islands">British Virgin Islands
+										<option value="Brunei">Brunei
+										<option value="Bulgaria">Bulgaria
+										<option value="Burkina Faso">Burkina Faso
+										<option value="Burma">Burma
+										<option value="Burundi">Burundi
+										<option value="Cambodia">Cambodia
+										<option value="Cameroon">Cameroon
+										<option value="Canada">Canada
+										<option value="Cape Verde">Cape Verde
+										<option value="Cayman Islands">Cayman Islands
+										<option value="Central African Republic">Central African Republic
+										<option value="Chad">Chad
+										<option value="Chile">Chile
+										<option value="China">China
+										<option value="Christmas Island">Christmas Island
+										<option value="Clipperton Island">Clipperton Island
+										<option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands
+										<option value="Colombia">Colombia
+										<option value="Comoros">Comoros
+										<option value="Congo, Democratic Republic of the">Congo, Democratic Republic of the
+										<option value="Congo, Republic of the">Congo, Republic of the
+										<option value="Cook Islands">Cook Islands
+										<option value="Costa Rica">Costa Rica
+										<option value="Cote d'Ivoire">Cote d'Ivoire
+										<option value="Croatia">Croatia
+										<option value="Cuba">Cuba
+										<option value="Cyprus">Cyprus
+										<option value="Czeck Republic">Czeck Republic
+										<option value="Denmark">Denmark
+										<option value="Djibouti">Djibouti
+										<option value="Dominica">Dominica
+										<option value="Dominican Republic">Dominican Republic
+										<option value="Ecuador">Ecuador
+										<option value="Egypt">Egypt
+										<option value="El Salvador">El Salvador
+										<option value="Equatorial Guinea">Equatorial Guinea
+										<option value="Eritrea">Eritrea
+										<option value="Estonia">Estonia
+										<option value="Ethiopia">Ethiopia
+										<option value="Europa Island">Europa Island
+										<option value="Falkland Islands (Islas Malvinas)">Falkland Islands (Islas Malvinas)
+										<option value="Faroe Islands">Faroe Islands
+										<option value="Fiji">Fiji
+										<option value="Finland">Finland
+										<option value="France">France
+										<option value="French Guiana">French Guiana
+										<option value="French Polynesia">French Polynesia
+										<option value="French Southern and Antarctic Lands">French Southern and Antarctic Lands
+										<option value="Gabon">Gabon
+										<option value="Gambia, The">Gambia, The
+										<option value="Gaza Strip">Gaza Strip
+										<option value="Georgia">Georgia
+										<option value="Germany">Germany
+										<option value="Ghana">Ghana
+										<option value="Gibraltar">Gibraltar
+										<option value="Glorioso Islands">Glorioso Islands
+										<option value="Greece">Greece
+										<option value="Greenland">Greenland
+										<option value="Grenada">Grenada
+										<option value="Guadeloupe">Guadeloupe
+										<option value="Guam">Guam
+										<option value="Guatemala">Guatemala
+										<option value="Guernsey">Guernsey
+										<option value="Guinea">Guinea
+										<option value="Guinea-Bissau">Guinea-Bissau
+										<option value="Guyana">Guyana
+										<option value="Haiti">Haiti
+										<option value="Heard Island and McDonald Islands">Heard Island and McDonald Islands
+										<option value="Holy See (Vatican City)">Holy See (Vatican City)
+										<option value="Honduras">Honduras
+										<option value="Hong Kong">Hong Kong
+										<option value="Howland Island">Howland Island
+										<option value="Hungary">Hungary
+										<option value="Iceland">Iceland
+										<option value="India">India
+										<option value="Indonesia">Indonesia
+										<option value="Iran">Iran
+										<option value="Iraq">Iraq
+										<option value="Ireland">Ireland
+										<option value="Ireland, Northern">Ireland, Northern
+										<option value="Israel">Israel
+										<option value="Italy">Italy
+										<option value="Jamaica">Jamaica
+										<option value="Jan Mayen">Jan Mayen
+										<option value="Japan">Japan
+										<option value="Jarvis Island">Jarvis Island
+										<option value="Jersey">Jersey
+										<option value="Johnston Atoll">Johnston Atoll
+										<option value="Jordan">Jordan
+										<option value="Juan de Nova Island">Juan de Nova Island
+										<option value="Kazakhstan">Kazakhstan
+										<option value="Kenya">Kenya
+										<option value="Kiribati">Kiribati
+										<option value="Korea, North">Korea, North
+										<option value="Korea, South">Korea, South
+										<option value="Kuwait">Kuwait
+										<option value="Kyrgyzstan">Kyrgyzstan
+										<option value="Laos">Laos
+										<option value="Latvia">Latvia
+										<option value="Lebanon">Lebanon
+										<option value="Lesotho">Lesotho
+										<option value="Liberia">Liberia
+										<option value="Libya">Libya
+										<option value="Liechtenstein">Liechtenstein
+										<option value="Lithuania">Lithuania
+										<option value="Luxembourg">Luxembourg
+										<option value="Macau">Macau
+										<option value="Macedonia, Former Yugoslav Republic of">Macedonia, Former Yugoslav Republic of
+										<option value="Madagascar">Madagascar
+										<option value="Malawi">Malawi
+										<option value="Malaysia">Malaysia
+										<option value="Maldives">Maldives
+										<option value="Mali">Mali
+										<option value="Malta">Malta
+										<option value="Man, Isle of">Man, Isle of
+										<option value="Marshall Islands">Marshall Islands
+										<option value="Martinique">Martinique
+										<option value="Mauritania">Mauritania
+										<option value="Mauritius">Mauritius
+										<option value="Mayotte">Mayotte
+										<option value="Mexico">Mexico
+										<option value="Micronesia, Federated States of">Micronesia, Federated States of
+										<option value="Midway Islands">Midway Islands
+										<option value="Moldova">Moldova
+										<option value="Monaco">Monaco
+										<option value="Mongolia">Mongolia
+										<option value="Montserrat">Montserrat
+										<option value="Morocco">Morocco
+										<option value="Mozambique">Mozambique
+										<option value="Namibia">Namibia
+										<option value="Nauru">Nauru
+										<option value="Nepal">Nepal
+										<option value="Netherlands">Netherlands
+										<option value="Netherlands Antilles">Netherlands Antilles
+										<option value="New Caledonia">New Caledonia
+										<option value="New Zealand">New Zealand
+										<option value="Nicaragua">Nicaragua
+										<option value="Niger">Niger
+										<option value="Nigeria">Nigeria
+										<option value="Niue">Niue
+										<option value="Norfolk Island">Norfolk Island
+										<option value="Northern Mariana Islands">Northern Mariana Islands
+										<option value="Norway">Norway
+										<option value="Oman">Oman
+										<option value="Pakistan">Pakistan
+										<option value="Palau">Palau
+										<option value="Panama">Panama
+										<option value="Papua New Guinea">Papua New Guinea
+										<option value="Paraguay">Paraguay
+										<option value="Peru">Peru
+										<option value="Philippines">Philippines
+										<option value="Pitcaim Islands">Pitcaim Islands
+										<option value="Poland">Poland
+										<option value="Portugal">Portugal
+										<option value="Puerto Rico">Puerto Rico
+										<option value="Qatar">Qatar
+										<option value="Reunion">Reunion
+										<option value="Romainia">Romainia
+										<option value="Russia">Russia
+										<option value="Rwanda">Rwanda
+										<option value="Saint Helena">Saint Helena
+										<option value="Saint Kitts and Nevis">Saint Kitts and Nevis
+										<option value="Saint Lucia">Saint Lucia
+										<option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon
+										<option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines
+										<option value="Samoa">Samoa
+										<option value="San Marino">San Marino
+										<option value="Sao Tome and Principe">Sao Tome and Principe
+										<option value="Saudi Arabia">Saudi Arabia
+										<option value="Scotland">Scotland
+										<option value="Senegal">Senegal
+										<option value="Seychelles">Seychelles
+										<option value="Sierra Leone">Sierra Leone
+										<option value="Singapore">Singapore
+										<option value="Slovakia">Slovakia
+										<option value="Slovenia">Slovenia
+										<option value="Solomon Islands">Solomon Islands
+										<option value="Somalia">Somalia
+										<option value="South Africa">South Africa
+										<option value="South Georgia and South Sandwich Islands">South Georgia and South Sandwich Islands
+										<option value="Spain">Spain
+										<option value="Spratly Islands">Spratly Islands
+										<option value="Sri Lanka">Sri Lanka
+										<option value="Sudan">Sudan
+										<option value="Suriname">Suriname
+										<option value="Svalbard">Svalbard
+										<option value="Swaziland">Swaziland
+										<option value="Sweden">Sweden
+										<option value="Switzerland">Switzerland
+										<option value="Syria">Syria
+										<option value="Taiwan">Taiwan
+										<option value="Tajikistan">Tajikistan
+										<option value="Tanzania">Tanzania
+										<option value="Thailand">Thailand
+										<option value="Tobago">Tobago
+										<option value="Toga">Toga
+										<option value="Tokelau">Tokelau
+										<option value="Tonga">Tonga
+										<option value="Trinidad">Trinidad
+										<option value="Tunisia">Tunisia
+										<option value="Turkey">Turkey
+										<option value="Turkmenistan">Turkmenistan
+										<option value="Tuvalu">Tuvalu
+										<option value="Uganda">Uganda
+										<option value="Ukraine">Ukraine
+										<option value="United Arab Emirates">United Arab Emirates
+										<option value="United Kingdom">United Kingdom
+										<option value="Uruguay">Uruguay
+										<option value="USA">USA
+										<option value="Uzbekistan">Uzbekistan
+										<option value="Vanuatu">Vanuatu
+										<option value="Venezuela">Venezuela
+										<option value="Vietnam">Vietnam
+										<option value="Virgin Islands">Virgin Islands
+										<option value="Wales">Wales
+										<option value="Wallis and Futuna">Wallis and Futuna
+										<option value="West Bank">West Bank
+										<option value="Western Sahara">Western Sahara
+										<option value="Yemen">Yemen
+										<option value="Yugoslavia">Yugoslavia
+										<option value="Zambia">Zambia
+										<option value="Zimbabwe">Zimbabwe
+									</select>
+									<label class="rntlable">Geographic Region</label>
+                                </div>
+								</div>
+								<div class="col-sm-12 col-md-12 col-lg-12">
+								<div class="form-group">
+                                    <select name="" id="" class="select-1" required>
+                                        <option value="">Product</option>
+                                        <option value="Fixed income">Fixed income</option>
+                                        <option value="Retail Cards">Retail Cards</option>
+                                        <option value="Consumer Current Accounts">Consumer Current Accounts</option>
+										<option value="Not Product Related">Not Product Related</option>
+                                    </select>
+									<label class="rntlable">Product</label>
+                                </div>
+								</div>
+								<div class="col-sm-12 col-md-12 col-lg-12">
+								<div class="form-group">
+                                    <select name="" id="" class="select-1" required>
+                                        <option value="">Process Type</option>
+                                        <option value="Deliver Products and Services">Deliver Products and Services</option>
+                                        <option value="Market Products and Services">Market Products and Services</option>
+                                        <option value="Manage Human Resources">Manage Human Resources</option>
+										<option value="Not Process Related">Not Process Related</option>
+                                    </select>
+									<label class="rntlable">Process Type</label>
+                                </div>
+								</div>
+								
+								<div class="col-sm-12 col-md-12 col-lg-12">
+								<div class="form-group">
+                                    <div class="col-sm-6 col-md-6 col-lg-6 leftPadding">
+                                        <input type="text"  id="datepicker" class="select-1"  required style="padding-left:14px;" placeholder="Loss Date">
+                                        <i class="fa fa-calendar pull-right"></i>
+										<label class="rntlable">Loss Date</label>
+                                    </div>
+									
+                                    <div class="col-sm-6 col-md-6 col-lg-6 rightPadding">
+                                        <input type="text" name="" id="txtLossAmt" class="select-1" required style="padding-left:14px;" placeholder="Loss Amount">
+										<label class="rntlable" >Loss Amount</label>
+                                    </div>
+
+                                </div>
+								</div>
+								
+								<div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <select name="" id="" class="select-1" required>
+                                        <option value="">Credit related</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                       
+                                    </select>
+									<label class="rntlable">Credit related</label>
+									</div>
+									</div>
+								
+								
+								
+								<div class="col-sm-12 col-md-12 col-lg-12">
+								<div class="form-group">
+								<div class="col-sm-12 col-md-12 col-lg-12 select-1">
+								<div class="col-md-4" style="margin-top:5px;">Credit related</div>
+								<div class="col-md-4" style="margin-top:5px;"><label style="float:right;"><input type="radio" name="Credit" value="Yes" id="">&nbsp;Yes</label></div>
+								<div class="col-md-4" style="margin-top:5px;"><label style="float:right;"><input type="radio" name="Credit" value="No" id="" >&nbsp;No</label></div>
+								</div>
+								</div>
+								</div>
+								&nbsp;
+								<div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group text-right">
+								 <div class="col-sm-12 col-md-12 col-lg-12 rightPadding">
+                                    <button type="button" class="submitFinance btn btn-default">Submit</button>
+									</div>
+                                </div>
+								</div>
+								
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 dataSourceContainer">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="panel">
+                                <div class="panel-heading">Data Source</div>
+                                <div class="titleBottom dataSourceBottom"style="width: 99px !important;margin-left: 16px"></div>
+                                <div class="panel-body">
+                                    <div class="dataSourceContent">
+                                        <span>9600 </span>-<span> Reuters</span>
+                                    </div>
+                                    <div class="dataSourceContent">
+                                        <span>9647 </span>-<span> Economists</span>
+                                    </div>
+                                    <div class="dataSourceContent">
+                                        <span>2000 </span>-<span> Live</span>
+                                    </div>
+                                    <div class="dataSourceContent">
+                                        <span>1500 </span>-<span> Money Control</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="panel">
+                                <div class="panel-heading">NLP Features</div>
+                                <div class="titleBottom dataSourceBottom" style="width: 110px !important;margin-left: 16px"></div>
+                                <div class="panel-body">
+                                    <div class="dataSourceContent">
+                                        <span>NER</span>
+                                    </div>
+                                    <div class="dataSourceContent">
+                                        <span>Semantic Analysis</span>
+                                    </div>
+                                    <div class="dataSourceContent">
+                                        <span>Sentiment Analysis</span>
+                                    </div>
+                                    <div class="dataSourceContent">
+                                        <span>Similarity Index</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-7 col-md-7 col-lg-7">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="panel">
+                        <div class="panel-heading">Top 5 results</div>
+                        <div class="titleBottom" style="width: 101px;margin-left: 16px"></div>
+                        <div class="panel-body">
+
+                            <!-- Top 5 result load here -->
+                            <div class="topFiveResult">
+
+                            </div>
+                            <!-- Top 5 result ends here -->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="panel">
+                        <div class="panel-heading">Exploration</div>
+                        <div class="titleBottom" style="width: 89px;margin-left: 16px"></div>
+                        <div class="panel-body">
+
+                            <!-- Exploration load here -->
+                            <div class="financeContent">
+
+                            </div>
+                            <!-- Exploration load here -->
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer class="footerStyle text-center">
+            <span class="footerContent">Copyright &copy; 2019, Rabbit and Tortoise Technology Solutions</span>
+    </footer>
+
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/moment.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/bootstrap-datepicker.js"></script>
+    <script src="static/js/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            $('.submitFinance').on('click', function () {
+                //alert('working');
+                $('.topFiveResult').load("topFiveResult/topFive1.html");
+            });
+
+            $(document).on('click', 'input[name="optradio"]', function () {
+                //alert(this.id[5]);
+                var radioID = this.id[5];
+                $('.financeContent').load("exploration/exploration" + radioID + ".html");
+            });
+
+            $("#datepicker").datepicker();
+            $('.fa-calendar').click(function () {
+                $("#datepicker").focus();
+            });
+            /* $('#datetimepicker1').datepicker(); */
+        });
+    </script>
+	<script>
+$(function () {
+    $('#txtLossAmt').focus(function () {
+        $(this).data('placeholder', $(this).attr('placeholder'))
+               .attr('placeholder', '');
+    }).blur(function () {
+        $(this).attr('placeholder', $(this).data('placeholder'));
+    });
+});
+
+
+$(function () {
+    $('#datepicker').focus(function () {
+        $(this).data('placeholder', $(this).attr('placeholder'))
+               .attr('placeholder', '');
+    }).blur(function () {
+        $(this).attr('placeholder', $(this).data('placeholder'));
+    });
+});
+	</script>
+	
+</body>
+</html>
